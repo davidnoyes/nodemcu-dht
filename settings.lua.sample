@@ -1,0 +1,10 @@
+--- MQTT ---
+mqtt_broker_ip = ""
+mqtt_broker_port = 1883
+mqtt_username = ""
+mqtt_password = ""
+mqtt_client_id = ""
+
+--- Sensor ---
+time_between_sensor_readings = 60000
+
