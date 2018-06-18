@@ -3,9 +3,9 @@ A simple project using a Lolin NodeMCU ESP8266 to read temperature & humidity fr
 
 ## Firmware
 - Downloaded from [https://nodemcu-build.com/](https://nodemcu-build.com/)
-
 - Flashed using [esptool.py](https://github.com/espressif/esptool)
-	$ esptool.py --port /dev/ttyUSB0 write_flash --flash_mode dio --verify 0x0000 nodemcu-master-XX-modules-XXXX-XX-XX-XX-XX-XX-float.bin
+
+$ esptool.py --port /dev/ttyUSB0 write_flash --flash_mode dio --verify 0x0000 nodemcu-master-XX-modules-XXXX-XX-XX-XX-XX-XX-float.bin
 
 ## Firmware modules in use
 **dht**, **file**, gpio, i2c, **mqtt**, net, **node**, ow, pcm, **tmr**, uart, **wifi**
@@ -33,5 +33,4 @@ Code uploaded using [nodemcu-uploader](https://github.com/kmpm/nodemcu-uploader)
 - $ nodemcu-uploader node restart
 - $ nodemcu-uploader terminal
 
-~Inspired by:
-- [https://odd-one-out.serek.eu/projects/esp8266-nodemcu-dht22-mqtt-deep-sleep/](https://odd-one-out.serek.eu/projects/esp8266-nodemcu-dht22-mqtt-deep-sleep/) ~
+Inspired by: [https://odd-one-out.serek.eu/projects/esp8266-nodemcu-dht22-mqtt-deep-sleep/](https://odd-one-out.serek.eu/projects/esp8266-nodemcu-dht22-mqtt-deep-sleep/)
