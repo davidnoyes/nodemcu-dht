@@ -40,14 +40,22 @@ function loop()
       get_sensor_data()
       m:publish(mqtt_topic.."/temperature",temp, 0, 0, function(conn)
         m:publish(mqtt_topic.."/humidity",humi, 0, 0, function(conn)
-          print("Going to deep sleep for "..(time_between_sensor_readings/1000).." seconds")
-          node.dsleep(time_between_sensor_readings*1000)
+          deep_sleep()
         end)
       end)
-    end )
+    end,
+    function(conn, reason)
+      print("MQTT Connection failed: "..reason)
+      deep_sleep()
+    end)
   else
     print("Connecting...")
   end
+end
+
+function deep_sleep()
+  print("Going to deep sleep for "..(time_between_sensor_readings/1000).." seconds")
+  node.dsleep(time_between_sensor_readings*1000)
 end
 
 tmr.alarm(0, 100, 1, function() loop() end)
