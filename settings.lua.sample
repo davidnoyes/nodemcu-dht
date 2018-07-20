@@ -1,10 +1,11 @@
 --- MQTT ---
 mqtt_broker_ip = ""
-mqtt_broker_port = 1883
+mqtt_broker_port = 1883 --- 1883=No SSL, 8883=SSL ---
+mqtt_secure = 0 --- 0=No SSL, 1=Use SSL ---
 mqtt_username = ""
 mqtt_password = ""
 mqtt_client_id = ""
-mqtt_topic = "ESP8266"
+mqtt_topic = "DHT"
 
 --- Sensor ---
 time_between_sensor_readings = 60000

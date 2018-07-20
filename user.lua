@@ -30,7 +30,7 @@ function loop()
     --- Check the IP Address ---
     print(wifi.sta.getip())
 
-    m:connect( mqtt_broker_ip , mqtt_broker_port, 0, function(conn)
+    m:connect( mqtt_broker_ip , mqtt_broker_port, mqtt_secure, function(conn)
       print("Connected to MQTT")
       print("  IP: ".. mqtt_broker_ip)
       print("  Port: ".. mqtt_broker_port)
