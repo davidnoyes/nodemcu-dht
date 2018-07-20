@@ -15,7 +15,7 @@ $ esptool.py --port /dev/ttyUSB0 write_flash --flash_mode dio --verify 0x0000 no
 - RST <-> D0 (GPIO16)
 - 3v <-> DHT 3v
 - G <-> DHT G
-- D4 (GPIO2) <-> DHT Out
+- D1 (GPIO5) <-> DHT Out
 
 ![NodeMCU Pin Diagram](./misc/nodemcu_pin_diagram.png  "NodeMCU Pin Diagram")
 

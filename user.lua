@@ -5,13 +5,13 @@ dofile("wifi.lua")
 dofile("settings.lua")
 
 -- Setup MQTT client and events
-m = mqtt.Client(client_id, 120, username, password)
+m = mqtt.Client(mqtt_client_id, 120, mqtt_username, mqtt_password)
 temperature = 0
 humidity = 0
 
 -- DHT22 sensor logic
 function get_sensor_data()
-  pin = 4
+  pin = 1
   status, temp, humi, temp_dec, humi_dec = dht.read(pin)
   if status == dht.OK then
     print("DHT Temp:"..temp.."; ".."Humidity:"..humi)
